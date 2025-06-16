@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contactar Empresa</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Cabecera -->
+   <header>
+    <a href="index.html"><img src="https://i.ibb.co/F95qJHn/Logo.png" alt="Logo de la página" class="logo"></a>
+    <div class="nombre-pagina">Chivita Recomienda</div>
+    <div class="busqueda-y-botones">
+      <input type="text" placeholder="Buscar..." />
+      <a href="login.html" class="btn-header">Iniciar Sesión</a>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+
+  <main class="contenedor login-registro">
+    <div class="form-container">
+      <h2>Contactar Empresa</h2>
+      <form action="#" method="post">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <label for="cv">Adjuntar CV (URL o texto):</label>
+        <input type="text" id="cv" name="cv" placeholder="https://drive.google.com/...">
+
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

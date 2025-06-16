@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chat en Tiempo Real</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+   <header>
+    <a href="index.html"><img src="https://i.ibb.co/F95qJHn/Logo.png" alt="Logo de la página" class="logo"></a>
+    <div class="nombre-pagina">Chivita Recomienda</div>
+    <div class="busqueda-y-botones">
+      <input type="text" placeholder="Buscar..." />
+      <a href="login.html" class="btn-header">Iniciar Sesión</a>
+    </div>
+  </header>
+
+ <main class="contenedor chat-layout">
+    
+    <!--  Menú lateral de contactos -->
+    <aside class="contactos">
+      <h3>Contactos</h3>
+      <ul>
+        <li class="contacto activo">Empresa X</li>
+        <li class="contacto">Usuario Y</li>
+        <li class="contacto">Soporte</li>
+      </ul>
+    </aside>
+
+    <!-- Área de conversación -->
+    <section class="chat-box">
+      <div class="chat-header">
+        <h3 id="nombre-chat">Chat con Empresa X</h3>
+      </div>
+
+      <div class="chat-mensajes" id="chat-mensajes">
+        <div class="mensaje recibido">Hola, ¿en qué podemos ayudarte?</div>
+      </div>
+
+      <div class="chat-input">
+        <input type="text" id="mensajeInput" placeholder="Escribe un mensaje..." />
+        <button id="enviarBtn">Enviar</button>
+      </div>
+    </section>
+  </main>
+
+    <!--  script para provar chat -->
+  <script>
+    const enviarBtn = document.getElementById("enviarBtn");
+    const mensajeInput = document.getElementById("mensajeInput");
+    const chatMensajes = document.getElementById("chat-mensajes");
+    const contactos = document.querySelectorAll(".contacto");
+    const nombreChat = document.getElementById("nombre-chat");
+
+    enviarBtn.addEventListener("click", () => {
+      const texto = mensajeInput.value.trim();
+      if (texto !== "") {
+        const nuevoMensaje = document.createElement("div");
+        nuevoMensaje.classList.add("mensaje", "enviado");
+        nuevoMensaje.textContent = texto;
+        chatMensajes.appendChild(nuevoMensaje);
+        mensajeInput.value = "";
+        chatMensajes.scrollTop = chatMensajes.scrollHeight;
+      }
+    });
+
+    mensajeInput.addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        enviarBtn.click();
+      }
+    });
+
+    contactos.forEach((contacto) => {
+      contacto.addEventListener("click", () => {
+        contactos.forEach(c => c.classList.remove("activo"));
+        contacto.classList.add("activo");
+
+        const nombre = contacto.textContent;
+        nombreChat.textContent = "Chat con " + nombre;
+        
+      });
+    });
+  </script>
+
+</body>
+</html>

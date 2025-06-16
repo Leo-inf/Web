@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Perfil de Usuario - Nombre de la Página</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <!-- Cabecera -->
+  <header>
+    <a href="index.html"><img src="https://i.ibb.co/F95qJHn/Logo.png" alt="Logo de la página" class="logo"></a>
+    <div class="nombre-pagina">Chivita Recomienda</div>
+    <div class="busqueda-y-botones">
+      <input type="text" placeholder="Buscar..." />
+      <a href="login.html" class="btn-header">Iniciar Sesión</a>
+    </div>
+  </header>
+
+  <!-- Contenido principal del perfil -->
+  <main class="contenedor perfil">
+    <div class="perfil-container">
+      <div class="perfil-foto">
+        <img src="https://i.ibb.co/F95qJHn/Logo.png" alt="Foto de usuario" />
+        <input type="file" id="cambiar-foto" hidden />
+        <label for="cambiar-foto" class="btn-perfil cambiar-foto">Cambiar foto</label>
+        <!-- Checkbox para convertirse en empresario -->
+        <label class="checkbox-label">
+          <input type="checkbox" id="convertirseEmpresario" />
+          Quiero registrar mi empresa
+        </label>
+      </div>
+
+      <div class="perfil-datos">
+        <h2>Chivita</h2>
+        <p><strong>Correo:</strong> Sal.de.hay@example.com</p>
+        <p><strong>Miembro desde:</strong> Junio 2025</p>
+
+        <div class="perfil-botones">
+          <a href="editar_perfil.html" class="btn-perfil">Editar Perfil</a>
+          <a href="cambiar_contraseña.html" class="btn-perfil">Cambiar Contraseña</a>
+          <a href="index.html" class="btn-perfil cerrar">Cerrar Sesión</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+<!-- Confirmacion para ir al registro empresario -->  
+ <script>
+    document.getElementById('convertirseEmpresario').addEventListener('change', function () {
+      if (this.checked) {
+        const confirmar = confirm("Serás redirigido para completar el registro como empresario. ¿Deseas continuar?");
+        if (confirmar) {
+          window.location.href = 'registro_empresario.html';
+        } else {
+          this.checked = false;
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
