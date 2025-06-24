@@ -2,19 +2,19 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Cambiar Contraseña</title>
+  <title>Ayuda</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
 
   <header>
-    <a href="index.html"><img src="https://i.ibb.co/F95qJHn/Logo.png" alt="Logo de la página" class="logo"></a>
+    <img src="https://i.ibb.co/F95qJHn/Logo.png" alt="Logo de la página" class="logo">
     <div class="nombre-pagina">Chivita Recomienda</div>
     <div class="busqueda-y-botones">
-      <input type="text" placeholder="Buscar..." />
+      <input type="text" placeholder="Buscar...">
       <a href="login.html" class="btn-header">Iniciar Sesión</a>
     </div>
-    <div class="menu">
+     <div class="menu">
       <button class="btmenu">
         <div></div>
         <div></div>
@@ -31,27 +31,52 @@
              </ul> 
     </div>
   </header>
+  
+  <main class="contenedor ayuda-container">
+    <section class="faq">
+      <h2>Preguntas Frecuentes</h2>
+        <br>
+      <div class="pregunta">
+        <h4>¿Cómo me registro como empresario?</h4>
+        <p>En la página de registro, marca la casilla "Empresario" para acceder al formulario exclusivo. O tambien puedes hacerlo desde tu perfil donde estara la misma casilla.</p>
+      </div>
 
-  <main class="contenedor login-registro">
-    <div class="form-container">
-      <h2>Cambiar Contraseña</h2>
+      <div class="pregunta">
+        <h4>¿Cómo contacto con soporte?</h4>
+        <p>Puedes escribirnos mediante el formulario al final de esta página o iniciar un chat desde el menú de chat.</p>
+      </div>
+
+      <div class="pregunta">
+        <h4>¿Puedo editar mis datos una vez registrado?</h4>
+        <p>Sí, accede a tu perfil para modificar tu información personal y empresarial.</p>
+      </div>
+    </section>
+
+    <section class="contacto-ayuda">
+      <h2>¿Necesitas más ayuda?</h2>
       <form action="#" method="post">
-        <label for="actual">Contraseña actual:</label>
-        <input type="password" id="actual" name="actual" required />
+        <label for="nombre">Tu nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
 
-        <label for="nueva">Nueva contraseña:</label>
-        <input type="password" id="nueva" name="nueva" required />
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required />
 
-        <label for="confirmar">Confirmar nueva contraseña:</label>
-        <input type="password" id="confirmar" name="confirmar" required />
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
-        <button type="submit">Actualizar Contraseña</button>
+        <button type="submit">Enviar mensaje</button>
       </form>
-      <p><a href="perfil.html">Volver al perfil</a></p>
-    </div>
+    </section>
   </main>
-</body>
-<script>
+ <script>
+    //check empreasrio
+    document.getElementById('empresario').addEventListener('change', function () {
+      if (this.checked) {
+        window.location.href = 'registro_empresario.html';
+      }
+    });
+
+    // script menu
   const menuToggle = document.querySelector(".btmenu");
   const menuOpciones = document.querySelector(".opciones");
 
@@ -65,6 +90,7 @@
       menuOpciones.style.display = "none";
     }
   });
+  
 </script>
 <footer>
         <p>&copy; 2025 Chivita Recomienda. Todos los derechos reservados.</p>
@@ -75,4 +101,5 @@
         </li>
         </ul>
 </footer>
+</body>
 </html>

@@ -718,7 +718,7 @@ aside nav ul li a {
   height: 100%;
 }
 /*--------------------------------------------------------------------------------------------
-                                                despliegue del menu
+                                              DESPLIEGUE DEL MENU
 -------------------------------------------------------------------------------------------*/
 .menu {
   position: left;
@@ -837,4 +837,174 @@ aside nav ul li a {
 
 .terminos-checkbox a:hover {
   text-decoration: underline;
+}
+
+/*---------------------------------------------------------------------------------------------
+                                          FOOTER
+---------------------------------------------------------------------------------------------*/
+footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+footer a {
+  color: white;
+  text-decoration: underline;
+}
+footer a:hover {
+  text-decoration: none;
+}
+
+/*---------------------------------------------------------------------------------------------
+                                          ESTILO DE AYUDA
+---------------------------------------------------------------------------------------------*/
+.ayuda-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq, .contacto-ayuda {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.faq h2, .contacto-ayuda h2 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.pregunta {
+  margin-bottom: 20px;
+}
+
+.pregunta h4 {
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.pregunta p {
+  margin: 0;
+  color: #555;
+}
+
+.contacto-ayuda label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.contacto-ayuda input,
+.contacto-ayuda textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contacto-ayuda button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/*-------------------------------------------------------------------------------------
+                                      ESTILO DE POLITICA DE PRIVACIDAD
+--------------------------------------------------------------------------------------*/
+.politicas {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.politicas h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.politicas h3 {
+  margin-top: 20px;
+  color: #007bff;
+}
+
+.politicas p,
+.politicas ul {
+  font-size: 15px;
+  line-height: 1.6;
+}
+/*------------------------------------------------------------------------------------------- 
+                                      ESTILO DE CONTACTO
+---------------------------------------------------------------------------------------------*/
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 30px;
+  justify-content: center;
+}
+
+.form-contacto {
+  flex: 1 1 400px;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-contacto h2 {
+  margin-top: 0;
+}
+
+.form-contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-contacto input,
+.form-contacto textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-contacto button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.info-contacto {
+  flex: 1 1 300px;
+  background-color: #f7f7f7;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }

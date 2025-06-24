@@ -2,12 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Cambiar Contraseña</title>
+  <title>Políticas de Privacidad</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
 
-  <header>
+   <header>
     <a href="index.html"><img src="https://i.ibb.co/F95qJHn/Logo.png" alt="Logo de la página" class="logo"></a>
     <div class="nombre-pagina">Chivita Recomienda</div>
     <div class="busqueda-y-botones">
@@ -32,26 +32,56 @@
     </div>
   </header>
 
-  <main class="contenedor login-registro">
-    <div class="form-container">
-      <h2>Cambiar Contraseña</h2>
-      <form action="#" method="post">
-        <label for="actual">Contraseña actual:</label>
-        <input type="password" id="actual" name="actual" required />
+  <main class="contenedor politicas">
+    <h2>Políticas de Privacidad</h2>
 
-        <label for="nueva">Nueva contraseña:</label>
-        <input type="password" id="nueva" name="nueva" required />
+    <p>En <strong>Chivita Recomienda</strong>, nos comprometemos a proteger la privacidad de nuestros usuarios. Esta política describe cómo recopilamos, usamos y protegemos su información personal.</p>
+            <p>Última actualización: Junio 2025</p>
 
-        <label for="confirmar">Confirmar nueva contraseña:</label>
-        <input type="password" id="confirmar" name="confirmar" required />
+ 
 
-        <button type="submit">Actualizar Contraseña</button>
-      </form>
-      <p><a href="perfil.html">Volver al perfil</a></p>
-    </div>
+    <h3>1. Información que recopilamos</h3>
+    <p>Podemos recopilar los siguientes datos personales:</p>
+
+    <ul>
+      <li>Nombre completo</li>
+      <li>Dirección de correo electrónico</li>
+      <li>Teléfono de contacto</li>
+      <li>Información de empresa (si aplica)</li>
+      <li>Dirección IP y datos de navegación</li>
+    </ul>
+    
+    <h3>2. Uso de la información</h3>
+    <p>La información recopilada se utiliza para:</p>
+    <ul>
+      <li>Proporcionar y personalizar nuestros servicios</li>
+      <li>Mejorar la experiencia del usuario</li>
+      <li>Envío de comunicaciones relacionadas con la plataforma</li>
+      <li>Cumplir con obligaciones legales</li>
+    </ul>
+    
+    <h3>3. Compartir información</h3>
+    <p>No compartimos información personal con terceros, excepto en los siguientes casos:</p>
+    <ul>
+      <li>Con proveedores de servicios que nos ayudan a operar el sitio</li>
+      <li>Cuando sea requerido por la ley</li>
+      <li>Con su consentimiento explícito</li>
+    </ul>
+    
+    <h3>4. Seguridad</h3>
+    <p>Implementamos medidas de seguridad técnicas y organizativas para proteger su información.</p>
+    <br>
+    <h3>5. Derechos del usuario</h3>
+    <p>Usted tiene derecho a acceder, rectificar o eliminar su información personal. Para ejercer estos derechos, contáctenos en <a href="mailto:soporte@ejemplo.com">soporte@ejemplo.com</a>.</p>
+    <br>
+    <h3>6. Cambios a esta política</h3>
+    <p>Podemos actualizar esta política ocasionalmente. Cualquier cambio será comunicado en esta página.</p>
+
   </main>
+  <br>
 </body>
 <script>
+    // script menu
   const menuToggle = document.querySelector(".btmenu");
   const menuOpciones = document.querySelector(".opciones");
 
@@ -65,6 +95,7 @@
       menuOpciones.style.display = "none";
     }
   });
+  
 </script>
 <footer>
         <p>&copy; 2025 Chivita Recomienda. Todos los derechos reservados.</p>
