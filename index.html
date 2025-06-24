@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-
   <!-- Cabecera -->
   <header>
     <img src="https://i.ibb.co/F95qJHn/Logo.png" alt="Logo de la página" class="logo">
@@ -15,8 +14,27 @@
       <input type="text" placeholder="Buscar...">
       <a href="login.html" class="btn-header">Iniciar Sesión</a>
     </div>
+     <div class="menu">
+      <button class="btmenu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button> 
+              <ul class="opciones">       
+                <li><a href="perfil.html">Mi Perfil</a></li>
+                <li><a href="publicar_solicitud.html">Publicar Solicitud</a></li>
+                <li><a href="panel_empresario.html">Mi Panel</a></li>
+                <li><a href="bolsa_trabajo.html">Ver Ofertas</a></li>
+                <li><a href="chat.html">Chat</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+                <li><a href="terminos.html">Términos y Condiciones</a></li>
+                <li><a href="politica_privacidad.html">Política de Privacidad</a></li>
+                <li><a href="logout.html">Cerrar Sesión</a></li>
+             </ul> 
+    </div>
   </header>
-
+  
   <!-- Contenido principal -->
   <main>
     <div class="contenedor">
@@ -26,11 +44,11 @@
         <nav>
         <h3>menu temportal</h3>
           <ul style="list-style: none; padding: 0;">
-            <li><a href="perfil.html">Mi Perfil</a></li>
-            <li><a href="publicar_solicitud.html" >Publicar Solicitud</a></li>
-            <li><a href="panel_empresario.html" >Mi Panel</a></li>
-            <li><a href="bolsa_trabajo.html" >Ver Ofertas</a></li>
-            <li><a href="chat.html" >Chat</a></li>
+            <li><a href="#">Plomeria</a></li>
+            <li><a href="#">Jardineria</a></li>
+            <li><a href="#">Clases Particulares</a></li>
+            <li><a href="#">Conserje</a></li>
+            <li><a href="#">Diseñador Grafico</a></li>
           </ul>
         </nav>
       </aside>
@@ -51,7 +69,7 @@
 
     <p class="descripcion-empresa">
       Empresa especializada en dar consejos y decirte las cosas tal y
-      como son (el sacarcasmo y el humor acido son parte de la empresa no se aceptan devoluciones)
+       como son (el sacarcasmo y el humor acido son parte de la empresa no se aceptan devoluciones)
     </p>
     <p class="direccion-empresa"> Av. Rebibbia Ciudad  Roma, Italia</p>
 
@@ -69,18 +87,18 @@
             <h4 class="nombre-empresa"> Immediate Murder Professionals (IMP)</h4>
 
             <div class="estrellas">
-              ★★★☆☆ 3.4
+              ★★★★☆ 4.6
             </div>
 
             <p class="descripcion-empresa">
               Ofrecemos el servicio único de eliminar objetivos vivos que aún están en la Tierra 
               como una forma de resolver los asuntos pendientes de los residentes del Infierno.
             </p>
-
-             <p class="descripcion-empresa">
+            
+            <p class="descripcion-empresa">
               Solicitud: se busca conserje
             </p>
-            
+
             <p class="direccion-empresa">
              Segundo Círculo, Anillo del Orgullo, Infierno 
             </p>  <a href="detalle_solicitud.html" class="btn-header">Ver más</a>
@@ -92,4 +110,19 @@
     </div>
   </main>
 </body>
+<script>
+  const menuToggle = document.querySelector(".btmenu");
+  const menuOpciones = document.querySelector(".opciones");
+
+  menuToggle.addEventListener("click", () => {
+    menuOpciones.style.display =
+      menuOpciones.style.display === "block" ? "none" : "block";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (!menuToggle.contains(e.target) && !menuOpciones.contains(e.target)) {
+      menuOpciones.style.display = "none";
+    }
+  });
+</script>+
 </html>
