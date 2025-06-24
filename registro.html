@@ -5,25 +5,6 @@
   <title>Registro - Nombre de la Página</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
-    <div class="menu">
-      <button class="btmenu">
-        <div></div>
-        <div></div>
-        <div></div>
-      </button> 
-              <ul class="opciones">       
-                <li><a href="perfil.html">Mi Perfil</a></li>
-                <li><a href="publicar_solicitud.html">Publicar Solicitud</a></li>
-                <li><a href="panel_empresario.html">Mi Panel</a></li>
-                <li><a href="bolsa_trabajo.html">Ver Ofertas</a></li>
-                <li><a href="chat.html">Chat</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-                <li><a href="ayuda.html">Ayuda</a></li>
-                <li><a href="terminos.html">Términos y Condiciones</a></li>
-                <li><a href="politica_privacidad.html">Política de Privacidad</a></li>
-                <li><a href="logout.html">Cerrar Sesión</a></li>
-             </ul> 
-    </div>
 <body>
 
   <header>
@@ -44,7 +25,6 @@
                 <li><a href="panel_empresario.html">Mi Panel</a></li>
                 <li><a href="bolsa_trabajo.html">Ver Ofertas</a></li>
                 <li><a href="chat.html">Chat</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="ayuda.html">Ayuda</a></li>
                 <li><a href="terminos.html">Términos y Condiciones</a></li>
                 <li><a href="politica_privacidad.html">Política de Privacidad</a></li>
@@ -69,10 +49,13 @@
         <label for="password2">Confirmar contraseña:</label>
         <input type="password" id="password2" name="password2" required />
 
-        <label class="checkbox-label">
-          <input type="checkbox"/> Aceptar  <a href="Terminos.html"> Término y Condiciones</a>
-        </label>
-        
+        <div class="terminos-checkbox">
+          <input type="checkbox" id="aceptar" required>
+          <label for="aceptar">
+            Acepto los <a href="terminos.html" target="_blank">Términos y Condiciones</a>
+          </label>
+        </div>
+
         <label class="checkbox-label">
           <input type="checkbox" id="empresario" /> Soy empresario
         </label>
@@ -105,7 +88,7 @@
       menuOpciones.style.display = "none";
     }
   });
-
+  
   </script>
 
 </body>

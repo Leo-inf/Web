@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Términos y Condiciones</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header>
+    <img src="https://i.ibb.co/F95qJHn/Logo.png" alt="Logo de la página" class="logo">
+    <div class="nombre-pagina">Chivita Recomienda</div>
+    <div class="busqueda-y-botones">
+      <input type="text" placeholder="Buscar...">
+      <a href="login.html" class="btn-header">Iniciar Sesión</a>
+    </div>
+     <div class="menu">
+      <button class="btmenu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button> 
+              <ul class="opciones">       
+                <li><a href="perfil.html">Mi Perfil</a></li>
+                <li><a href="publicar_solicitud.html">Publicar Solicitud</a></li>
+                <li><a href="panel_empresario.html">Mi Panel</a></li>
+                <li><a href="bolsa_trabajo.html">Ver Ofertas</a></li>
+                <li><a href="chat.html">Chat</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+                <li><a href="terminos.html">Términos y Condiciones</a></li>
+                <li><a href="politica_privacidad.html">Política de Privacidad</a></li>
+                <li><a href="logout.html">Cerrar Sesión</a></li>
+             </ul> 
+    </div>
+  </header>
+  
+  <main class="contenedor terminos">
+    <h1>Términos y Condiciones de Servicio</h1> 
+        <p5>Bienvenido a Chivita Recomienda. Al utilizar nuestro sitio web, usted acepta cumplir con los siguientes términos y condiciones. Si no está de acuerdo con estos términos, le pedimos que no utilice nuestro sitio Web. Gracias.</p5>
+
+    <p>Fecha de última actualización: 24 de junio de 2025</p>
+
+    <h2>1. Aceptación de los términos</h2>
+    <p>Al acceder o utilizar nuestro sitio web, usted acepta quedar vinculado por estos términos y condiciones, todas las leyes y regulaciones aplicables, y acepta que es responsable de cumplir con cualquier ley local aplicable.</p>
+    
+    <br>
+
+    <h2>2. Uso del sitio</h2>
+    <p>Este sitio web está destinado a proporcionar información general y servicios relacionados. Usted acepta utilizar el sitio solo con fines legales y de manera que no infrinja los derechos de terceros.</p>
+
+    <br>
+
+    <h2>3. Registro de cuenta</h2>
+    <p>Para acceder a ciertas funciones del sitio, se le puede solicitar que cree una cuenta. Usted es responsable de mantener la confidencialidad de su cuenta y contraseña, así como de todas las actividades que ocurran bajo su cuenta.</p>
+
+    <br>
+
+    <h2>4. Contenido del usuario</h2>
+    <p>Al enviar contenido al sitio, usted nos otorga una licencia para usar, reproducir y distribuir dicho contenido para fines relacionados con el servicio.</p>
+
+    <br>
+
+    <h2>5. Limitación de responsabilidad</h2>
+    <p>No seremos responsables por daños directos, indirectos, incidentales, especiales o consecuentes que resulten del uso o la imposibilidad de uso del sitio.</p>
+
+    <br>
+
+    <h2>6. Cambios a los términos</h2>
+    <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Las modificaciones entrarán en vigencia inmediatamente después de su publicación en el sitio.</p>
+
+    <br>
+
+    <h2>7. Contacto</h2>
+    <p>Si tiene alguna pregunta sobre estos términos, puede contactarnos a través de nuestro formulario o correo electrónico de soporte.</p>
+  </main>
+</body>
+<script>
+  const menuToggle = document.querySelector(".btmenu");
+  const menuOpciones = document.querySelector(".opciones");
+
+  menuToggle.addEventListener("click", () => {
+    menuOpciones.style.display =
+      menuOpciones.style.display === "block" ? "none" : "block";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (!menuToggle.contains(e.target) && !menuOpciones.contains(e.target)) {
+      menuOpciones.style.display = "none";
+    }
+  });
+</script>
+</html>
