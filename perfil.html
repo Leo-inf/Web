@@ -74,22 +74,21 @@
         }
       }
     });
-
-    // script menu
-  const menuToggle = document.querySelector(".btmenu");
-  const menuOpciones = document.querySelector(".opciones");
-
-  menuToggle.addEventListener("click", () => {
-    menuOpciones.style.display =
-      menuOpciones.style.display === "block" ? "none" : "block";
-  });
-
-  window.addEventListener("click", (e) => {
-    if (!menuToggle.contains(e.target) && !menuOpciones.contains(e.target)) {
-      menuOpciones.style.display = "none";
-    }
-  });
   </script>
+<script src="js/menu.js"></script>
+<script>
+  // Script para manejar el cambio de foto de perfil
+  document.getElementById('cambiar-foto').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        document.querySelector('.perfil-foto img').src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  }); 
+</script>
 <footer>
         <p>&copy; 2025 Chivita Recomienda. Todos los derechos reservados.</p>
         <ul class="footer-links">

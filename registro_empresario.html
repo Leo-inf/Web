@@ -65,26 +65,28 @@
         <label for="password">Contraseña:</label>
         <input type="password" id="password" name="password" required />
 
+        <div class="terminos-checkbox">
+          <input type="checkbox" id="aceptar" required>
+          <label for="aceptar">
+            Acepto los <a href="terminos.html" target="_blank">Términos y Condiciones</a>
+          </label>
+        </div>
+
         <button type="submit">Registrarse como Empresario</button>
       </form>
       <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
     </div>
   </main>
 </body>
+<script src="js/menu.js"></script>
 <script>
-  const menuToggle = document.querySelector(".btmenu");
-  const menuOpciones = document.querySelector(".opciones");
-
-  menuToggle.addEventListener("click", () => {
-    menuOpciones.style.display =
-      menuOpciones.style.display === "block" ? "none" : "block";
-  });
-
-  window.addEventListener("click", (e) => {
-    if (!menuToggle.contains(e.target) && !menuOpciones.contains(e.target)) {
-      menuOpciones.style.display = "none";
-    }
-  });
+      // check aceptar terminos
+    document.getElementById('aceptar').addEventListener('change', function ()
+    {
+      if (!this.checked) {
+        alert("Debes aceptar los términos y condiciones para registrarte.");
+      }
+    });
 </script>
 <footer>
         <p>&copy; 2025 Chivita Recomienda. Todos los derechos reservados.</p>

@@ -55,8 +55,7 @@
       <div class="recomendaciones">
         <div class="tarjeta-empresa">
       <img src="https://www.auxmagazine.com/wp-content/uploads/2022/02/Armadillo.jpg" alt="Logo Empresa" class="logo-empresa" />
-
-  <div class="info-empresa">
+     <div class="info-empresa">
     <h4 class="nombre-empresa"> Y Una mierda de consejo S.A.</h4>
 
     <div class="estrellas">
@@ -106,22 +105,9 @@
     </div>
   </main>
 </body>
-<script>
-  const menuToggle = document.querySelector(".btmenu");
-  const menuOpciones = document.querySelector(".opciones");
-
-  menuToggle.addEventListener("click", () => {
-    menuOpciones.style.display =
-      menuOpciones.style.display === "block" ? "none" : "block";
-  });
-
-  window.addEventListener("click", (e) => {
-    if (!menuToggle.contains(e.target) && !menuOpciones.contains(e.target)) {
-      menuOpciones.style.display = "none";
-    }
-  });
-</script>
+<script src="js/menu.js"></script>
 <footer>
+  
         <p>&copy; 2025 Chivita Recomienda. Todos los derechos reservados.</p>
         <ul class="footer-links">
         <li><a href="terminos.html">Términos y Condiciones</a> 

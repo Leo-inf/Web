@@ -67,19 +67,19 @@
     </div>
   </main>
 </body>
-<script>
-  const menuToggle = document.querySelector(".btmenu");
-  const menuOpciones = document.querySelector(".opciones");
-
-  menuToggle.addEventListener("click", () => {
-    menuOpciones.style.display =
-      menuOpciones.style.display === "block" ? "none" : "block";
+<script src="js/menu.js"></script>
+<script>  
+  // script para publicar solicitud
+  document.querySelector('.form-container form').addEventListener('submit', function(event) { 
+    event.preventDefault(); // Evita el envío del formulario para pruebas
+    alert('Solicitud publicada exitosamente.'); // Mensaje de éxito
+    this.reset(); // Limpia el formulario
   });
-
-  window.addEventListener("click", (e) => {
-    if (!menuToggle.contains(e.target) && !menuOpciones.contains(e.target)) {
-      menuOpciones.style.display = "none";
-    }
+  // script para probar el formulario
+  document.querySelector('.form-container form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita el envío del formulario para pruebas
+    alert('Solicitud publicada exitosamente.'); // Mensaje de éxito
+    this.reset(); // Limpia el formulario
   });
 </script>
 

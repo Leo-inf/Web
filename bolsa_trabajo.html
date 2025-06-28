@@ -49,21 +49,7 @@
     <!-- Más ofertas -->
   </main>
 </body>
-<script>
-  const menuToggle = document.querySelector(".btmenu");
-  const menuOpciones = document.querySelector(".opciones");
-
-  menuToggle.addEventListener("click", () => {
-    menuOpciones.style.display =
-      menuOpciones.style.display === "block" ? "none" : "block";
-  });
-
-  window.addEventListener("click", (e) => {
-    if (!menuToggle.contains(e.target) && !menuOpciones.contains(e.target)) {
-      menuOpciones.style.display = "none";
-    }
-  });
-</script>
+<script src="js/menu.js"></script>
 <footer>
         <p>&copy; 2025 Chivita Recomienda. Todos los derechos reservados.</p>
         <ul class="footer-links">
